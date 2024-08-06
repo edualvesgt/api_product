@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\46291995867\\Desktop\\TesteUnitarios\\API_Product\\API_Product.csproj": {}
+    "C:\\Users\\46291995867\\Desktop\\api_product\\API\\API_Product.csproj": {}
   },
   "projects": {
-    "C:\\Users\\46291995867\\Desktop\\TesteUnitarios\\API_Product\\API_Product.csproj": {
+    "C:\\Users\\46291995867\\Desktop\\api_product\\API\\API_Product.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\46291995867\\Desktop\\TesteUnitarios\\API_Product\\API_Product.csproj",
+        "projectUniqueName": "C:\\Users\\46291995867\\Desktop\\api_product\\API\\API_Product.csproj",
         "projectName": "API_Product",
-        "projectPath": "C:\\Users\\46291995867\\Desktop\\TesteUnitarios\\API_Product\\API_Product.csproj",
+        "projectPath": "C:\\Users\\46291995867\\Desktop\\api_product\\API\\API_Product.csproj",
         "packagesPath": "C:\\Users\\46291995867\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\46291995867\\Desktop\\TesteUnitarios\\API_Product\\obj\\",
+        "outputPath": "C:\\Users\\46291995867\\Desktop\\api_product\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\46291995867\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,6 +63,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.70, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

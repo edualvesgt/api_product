@@ -31,6 +31,23 @@ namespace API_Product.Controllers
             }
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetById(Guid id) 
+        {
+            try
+            {
+                Products SearchProducts = _productRepository.GetById(id);
+
+                return Ok(SearchProducts);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         [HttpPost]
         public IActionResult Create(Products products)
         {
@@ -40,6 +57,36 @@ namespace API_Product.Controllers
                 return StatusCode(201, products);
             }
             catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpPut]
+        public IActionResult Update(Products products,Guid id)
+        {
+            try
+            {
+                _productRepository.Update(products, id);
+
+                return Ok("Produto Alterado com Sucesso ");
+
+            }
+            catch (Exception e )
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpDelete ("{id}")]
+        public IActionResult Delete(Guid id)
+        {
+            try
+            {
+                _productRepository.Delete(id);
+                return NoContent();
+            }
+            catch (Exception e )
             {
                 return BadRequest(e.Message);
             }

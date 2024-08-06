@@ -73,7 +73,26 @@ namespace API_Product.Repository
 
         public void Update(Products newProduct, Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var product = _context.Products.FirstOrDefault(x => x.ID == id);
+                if (product != null)
+                {
+                    // Atualiza as propriedades do produto existente com os valores do novo produto
+                    product.Name = newProduct.Name;
+                    product.Price = newProduct.Price;
+
+                    
+
+                    _context.Products.Update(product);
+                    _context.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

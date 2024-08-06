@@ -25,7 +25,7 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "API LiveFest",
+        Title = "API Products",
         Description = "Backend API",
         Contact = new OpenApiContact
         {
